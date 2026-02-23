@@ -21,7 +21,8 @@ var products = [
     priceNote:   "orientační cena",
     tags:        ["buildings"],
     image:       "images/products/h0-001.jpg",
-    email:       "info@namasinky.tech"
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/h0-001/"
   },
   {
     id:          "h0-002",
@@ -32,7 +33,8 @@ var products = [
     priceNote:   "orientační cena",
     tags:        ["track", "buildings"],
     image:       "images/products/h0-002.jpg",
-    email:       "info@namasinky.tech"
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/h0-002/"
   },
   {
     id:          "h0-003",
@@ -43,7 +45,8 @@ var products = [
     priceNote:   "orientační cena",
     tags:        ["lighting"],
     image:       "images/products/h0-003.jpg",
-    email:       "info@namasinky.tech"
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/h0-003/"
   },
   {
     id:          "h0-004",
@@ -54,7 +57,8 @@ var products = [
     priceNote:   "orientační cena",
     tags:        ["vegetation"],
     image:       "images/products/h0-004.jpg",
-    email:       "info@namasinky.tech"
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/h0-004/"
   },
 
   /* ────────── TT – Měřítko 1:120 ────────── */
@@ -67,7 +71,8 @@ var products = [
     priceNote:   "orientační cena",
     tags:        ["buildings"],
     image:       "images/products/tt-001.jpg",
-    email:       "info@namasinky.tech"
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/tt-001/"
   },
   {
     id:          "tt-002",
@@ -78,7 +83,8 @@ var products = [
     priceNote:   "orientační cena",
     tags:        ["buildings", "track"],
     image:       "images/products/tt-002.jpg",
-    email:       "info@namasinky.tech"
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/tt-002/"
   },
   {
     id:          "tt-003",
@@ -89,7 +95,8 @@ var products = [
     priceNote:   "orientační cena",
     tags:        ["vegetation"],
     image:       "images/products/tt-003.jpg",
-    email:       "info@namasinky.tech"
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/tt-003/"
   },
 
   /* ────────── N – Měřítko 1:160 ────────── */
@@ -102,7 +109,8 @@ var products = [
     priceNote:   "orientační cena",
     tags:        ["lighting", "track"],
     image:       "images/products/n-001.jpg",
-    email:       "info@namasinky.tech"
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/n-001/"
   },
   {
     id:          "n-002",
@@ -113,7 +121,8 @@ var products = [
     priceNote:   "orientační cena",
     tags:        ["track"],
     image:       "images/products/n-002.jpg",
-    email:       "info@namasinky.tech"
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/n-002/"
   },
   {
     id:          "n-003",
@@ -124,7 +133,8 @@ var products = [
     priceNote:   "orientační cena",
     tags:        ["buildings"],
     image:       "images/products/n-003.jpg",
-    email:       "info@namasinky.tech"
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/n-003/"
   },
 
   /* ────────── Různé ────────── */
@@ -137,7 +147,8 @@ var products = [
     priceNote:   "orientační cena",
     tags:        ["vehicles"],
     image:       "images/products/var-001.jpg",
-    email:       "info@namasinky.tech"
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/var-001/"
   },
   {
     id:          "var-002",
@@ -148,7 +159,8 @@ var products = [
     priceNote:   "orientační cena",
     tags:        ["track", "vegetation"],
     image:       "images/products/var-002.jpg",
-    email:       "info@namasinky.tech"
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/var-002/"
   }
 
 ];

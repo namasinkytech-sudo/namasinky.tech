@@ -23,8 +23,12 @@ function createCard(product) {
   var subject  = encodeURIComponent('Poptávka: ' + product.title);
   var mailto   = 'mailto:' + product.email + '?subject=' + subject;
 
+  var detailUrl = product.url ? product.url : null;
+  var cardTag   = detailUrl ? 'a href="' + detailUrl + '"' : 'div';
+  var cardClose = detailUrl ? 'a' : 'div';
+
   return (
-    '<article class="product-card">' +
+    '<' + cardTag + ' class="product-card">' +
       '<div class="product-card__image">' +
         '<img src="' + product.image + '" alt="' + product.title + '" loading="lazy"' +
              ' onerror="this.parentElement.classList.add(\'no-image\')">' +
@@ -38,10 +42,12 @@ function createCard(product) {
             '<span class="price">' + product.price + ' Kč</span>' +
             '<span class="price-note">' + product.priceNote + '</span>' +
           '</div>' +
-          '<a href="' + mailto + '" class="btn-inquire">Poptejte</a>' +
+          (detailUrl
+            ? '<span class="btn-inquire">Zobrazit detail</span>'
+            : '<a href="' + mailto + '" class="btn-inquire">Poptejte</a>') +
         '</div>' +
       '</div>' +
-    '</article>'
+    '</' + cardClose + '>'
   );
 }
 
