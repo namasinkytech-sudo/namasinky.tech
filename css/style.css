@@ -86,13 +86,18 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.03em;
   color: var(--text);
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .nav__logo span { color: var(--accent-gold); }
 .nav__logo-img {
   height: 2rem;
   width: auto;
-  margin-left: 0.5rem;
-  vertical-align: middle;
+  display: block;
+  border-radius: 6px;
+  border: 1.5px solid var(--accent-gold);
+  padding: 2px;
 }
 
 .nav__links {
