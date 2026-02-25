@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stavební buňky | NaMasinky.tech</title>
+  <meta name="description" content="Modulární stavební buňky pro modelovou železnici N. Patrové i přízemní provedení, s osvětlením nebo jako stavebnice.">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .product-detail {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+      transition: color 0.18s, border-color 0.18s;
+    }
+    .back-btn:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
+    .product-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.4rem;
+    }
+    .product-scale {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+      color: var(--accent-gold);
+      background: rgba(232, 184, 75, 0.1);
+      border: 1px solid rgba(232, 184, 75, 0.3);
+      padding: 0.15rem 0.6rem;
+      border-radius: var(--radius);
+    }
+    .product-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+    .product-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 2rem;
+    }
+    .product-main-placeholder {
+      width: 100%;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-elevated);
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+    .product-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .gallery-placeholder {
+      height: 140px;
+      border-radius: var(--radius);
+      border: 1px dashed var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+    .product-desc {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+    .product-desc p + p { margin-top: 0.8em; }
+    .variants-title {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      letter-spacing: 0.05em;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+    .variants-group { margin-bottom: 2rem; }
+    .variants-group__label {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .variant-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .variant-row:last-child { border-bottom: none; }
+    .variant-name { font-size: 0.95rem; color: var(--text); }
+    .variant-price {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--accent-gold);
+      white-space: nowrap;
+    }
+    .variant-price span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      margin-left: 0.3rem;
+    }
+    .product-cta { margin-top: 2.5rem; }
+    .btn-inquire {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      color: var(--bg);
+      background: var(--accent-gold);
+      border-radius: var(--radius);
+      padding: 0.75rem 2rem;
+      transition: opacity 0.18s;
+    }
+    .btn-inquire:hover { opacity: 0.85; }
+    @media (max-width: 600px) {
+      .variant-row { flex-direction: column; gap: 0.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="../../index.html" class="nav__logo">Na<span>Mašinky</span></a>
+      <ul class="nav__links">
+        <li><a href="../../h0.html">H0</a></li>
+        <li><a href="../../tt.html">TT</a></li>
+        <li><a href="../../n.html" class="active">N</a></li>
+        <li><a href="../../various.html">Různé</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="track-line"></div>
+
+  <main>
+    <div class="product-detail">
+
+      <a href="../../n.html" class="back-btn">← Zpět na N</a>
+
+      <div class="product-header">
+        <span class="product-scale">N · 1:160</span>
+        <h1 class="product-title">Stavební buňky</h1>
+      </div>
+
+      <div class="product-tags">
+        <span class="tag">🏠 Buildings</span>
+        <span class="tag">💡 Lighting</span>
+      </div>
+
+      <div class="product-main-placeholder">Fotka bude doplněna</div>
+
+      <div class="product-gallery">
+        <div class="gallery-placeholder">foto 1</div>
+        <div class="gallery-placeholder">foto 2</div>
+        <div class="gallery-placeholder">foto 3</div>
+        <div class="gallery-placeholder">foto 4</div>
+      </div>
+
+      <div class="product-desc">
+        <p>Modulární stavební buňky s možností sestavit na výšku jako patrový model (přízemí + 1. patro), nebo pouze jako přízemí.</p>
+        <p>Dodávají se ve standardní modré barvě. Na vyžádání je možná jiná barva. Buňky jsou konstruovány s možností případného osvětlení interiéru.</p>
+      </div>
+
+      <div>
+        <h2 class="variants-title">Varianty</h2>
+
+        <div class="variants-group">
+          <div class="variants-group__label">Patrové provedení (přízemí + 1. patro) — 3 ks + 3 ks</div>
+          <div class="variant-row">
+            <div class="variant-name">Sestavený model – lepený, bez osvětlení</div>
+            <div class="variant-price">XXX Kč <span>/ sada</span></div>
+          </div>
+          <div class="variant-row">
+            <div class="variant-name">Sestavený model – lepený, s osvětlením</div>
+            <div class="variant-price">XXX Kč <span>/ sada</span></div>
+          </div>
+          <div class="variant-row">
+            <div class="variant-name">Stavebnice – bez osvětlení</div>
+            <div class="variant-price">XXX Kč <span>/ sada</span></div>
+          </div>
+        </div>
+
+        <div class="variants-group">
+          <div class="variants-group__label">Pouze přízemí — 5 ks</div>
+          <div class="variant-row">
+            <div class="variant-name">Sestavený model – lepený, bez osvětlení</div>
+            <div class="variant-price">XXX Kč <span>/ sada</span></div>
+          </div>
+          <div class="variant-row">
+            <div class="variant-name">Sestavený model – lepený, s osvětlením</div>
+            <div class="variant-price">XXX Kč <span>/ sada</span></div>
+          </div>
+          <div class="variant-row">
+            <div class="variant-name">Stavebnice – bez osvětlení</div>
+            <div class="variant-price">XXX Kč <span>/ sada</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-cta">
+        <a href="mailto:namasinky.tech@gmail.com?subject=Poptávka%3A%20Stavební%20buňky%20N" class="btn-inquire">Poptejte →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="track-line"></div>
+
+  <footer class="site-footer">
+    <p>
+      © 2026 <a href="../../index.html">NaMasinky.tech</a>
+      &nbsp;·&nbsp;
+      3D tisk pro modelovou železnici
+      &nbsp;·&nbsp;
+      <a href="mailto:namasinky.tech@gmail.com">namasinky.tech@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
