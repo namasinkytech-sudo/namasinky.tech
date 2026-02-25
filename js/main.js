@@ -39,7 +39,7 @@ function createCard(product) {
         '<p class="product-card__desc">' + product.description + '</p>' +
         '<div class="product-card__footer">' +
           '<div class="product-card__price">' +
-            '<span class="price">' + product.price + ' Kč</span>' +
+            '<span class="price">' + (typeof product.price === 'number' ? product.price + ' Kč' : product.price) + '</span>' +
             '<span class="price-note">' + product.priceNote + '</span>' +
           '</div>' +
           (detailUrl

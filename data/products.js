@@ -15,11 +15,11 @@ var products = [
   {
     id:          "h0-001",
     category:    "h0",
-    title:       "Venkovský domek č. 1",
-    description: "Typický venkovský dům s přístavkem. Vhodný pro rurální scény i okraje městeček.",
-    price:       290,
-    priceNote:   "orientační cena",
-    tags:        ["buildings"],
+    title:       "Stavební buňky",
+    description: "Modulární buňky v patrové nebo přízemní variantě. Sestavený model nebo stavebnice, s možností osvětlení.",
+    price:       "od XXX",
+    priceNote:   "dle varianty",
+    tags:        ["buildings", "lighting"],
     image:       "images/products/h0-001.jpg",
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-001/"
