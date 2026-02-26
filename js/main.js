@@ -4,11 +4,11 @@
    ================================================ */
 
 const TAG_LABELS = {
-  buildings:  { label: 'Buildings',             emoji: '🏠' },
-  lighting:   { label: 'Lighting',              emoji: '💡' },
-  track:      { label: 'Track & Surroundings',  emoji: '🛤️' },
-  vegetation: { label: 'Vegetation & Terrain',  emoji: '🌳' },
-  vehicles:   { label: 'Vehicles & Accessories',emoji: '🚗' }
+  buildings:  { label: 'Budovy',        emoji: '🏠' },
+  lighting:   { label: 'Osvětlení',     emoji: '💡' },
+  track:      { label: 'Trať a okolí',  emoji: '🛤️' },
+  vegetation: { label: 'Vegetace',      emoji: '🌳' },
+  vehicles:   { label: 'Vozidla',       emoji: '🚗' }
 };
 
 /**
@@ -82,6 +82,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   /* Výchozí zobrazení – vše */
   showProducts(categoryProducts);
+
+  /* Dynamické filtry – jen tagy které mají alespoň 1 produkt */
+  var usedTags = [];
+  categoryProducts.forEach(function(p) {
+    p.tags.forEach(function(tag) {
+      if (usedTags.indexOf(tag) === -1) usedTags.push(tag);
+    });
+  });
+
+  var filtersEl = document.querySelector('.filters');
+  if (filtersEl) {
+    var btnsHTML = '<button class="filter-btn active" data-tag="all">Vše</button>';
+    usedTags.forEach(function(tag) {
+      var t = TAG_LABELS[tag] || { label: tag, emoji: '' };
+      btnsHTML += '<button class="filter-btn" data-tag="' + tag + '">' + t.emoji + ' ' + t.label + '</button>';
+    });
+    filtersEl.innerHTML = btnsHTML;
+  }
 
   /* Filtrování podle tagu */
   var filterBtns = document.querySelectorAll('.filter-btn');

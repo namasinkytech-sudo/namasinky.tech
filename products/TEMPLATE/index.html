@@ -3,175 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NÁZEV PRODUKTU | NaMašinky.tech</title>
+  <title>NÁZEV PRODUKTU | NaMasinky.tech</title>
   <meta name="description" content="KRÁTKÝ POPIS PRODUKTU – 3D tisknuté doplňky pro modelovou železnici.">
+  <link rel="icon" href="../../images/Logo.png">
   <link rel="stylesheet" href="../../css/style.css">
-  <style>
-    /* ── Detail produktu ───────────────────────── */
-    .product-detail {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 2.5rem 1.5rem 4rem;
-    }
-
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: var(--font-heading);
-      font-size: 1rem;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-      padding: 0.4rem 1rem;
-      border-radius: var(--radius);
-      margin-bottom: 2rem;
-      transition: color 0.18s, border-color 0.18s;
-    }
-    .back-btn:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
-
-    /* Hlavička produktu */
-    .product-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.4rem;
-    }
-    .product-scale {
-      font-family: var(--font-heading);
-      font-size: 1rem;
-      letter-spacing: 0.15em;
-      color: var(--accent-gold);
-      background: rgba(232, 184, 75, 0.1);
-      border: 1px solid rgba(232, 184, 75, 0.3);
-      padding: 0.15rem 0.6rem;
-      border-radius: var(--radius);
-    }
-    .product-title {
-      font-family: var(--font-heading);
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      line-height: 1;
-      letter-spacing: 0.02em;
-    }
-
-    /* Tagy */
-    .product-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 2rem;
-    }
-
-    /* Hlavní fotka */
-    .product-main-img {
-      width: 100%;
-      max-height: 480px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      margin-bottom: 1.5rem;
-      background: var(--bg-elevated);
-    }
-    /* Placeholder když není fotka */
-    .product-main-img.placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 320px;
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      letter-spacing: 0.05em;
-    }
-
-    /* Galerie */
-    .product-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 0.75rem;
-      margin-bottom: 2.5rem;
-    }
-    .product-gallery img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      cursor: pointer;
-      transition: border-color 0.18s, transform 0.18s;
-    }
-    .product-gallery img:hover {
-      border-color: var(--accent-gold);
-      transform: scale(1.03);
-    }
-    /* Placeholder dlaždice galerie */
-    .gallery-placeholder {
-      height: 140px;
-      border-radius: var(--radius);
-      border: 1px dashed var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      font-size: 0.8rem;
-      letter-spacing: 0.05em;
-    }
-
-    /* Popis + cena */
-    .product-body {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 2rem;
-      align-items: start;
-    }
-    @media (max-width: 600px) {
-      .product-body { grid-template-columns: 1fr; }
-    }
-
-    .product-desc {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--text-muted);
-    }
-    .product-desc p + p { margin-top: 1em; }
-
-    .product-sidebar {
-      min-width: 200px;
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    .product-price {
-      font-family: var(--font-heading);
-      font-size: 2.2rem;
-      color: var(--accent-gold);
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-    .product-price-note {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-    .btn-inquire {
-      display: block;
-      width: 100%;
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
-      letter-spacing: 0.1em;
-      color: var(--bg);
-      background: var(--accent-gold);
-      border: none;
-      border-radius: var(--radius);
-      padding: 0.65rem 1rem;
-      cursor: pointer;
-      text-align: center;
-      transition: opacity 0.18s;
-    }
-    .btn-inquire:hover { opacity: 0.85; }
-  </style>
 </head>
 <body>
 
@@ -179,7 +14,7 @@
     <nav class="nav">
       <a href="../../index.html" class="nav__logo">Na<span>Mašinky</span></a>
       <ul class="nav__links">
-        <li><a href="../../h0.html">H0</a></li>
+        <li><a href="../../h0.html">H0</a></li><!-- přidat class="active" na správnou kategorii -->
         <li><a href="../../tt.html">TT</a></li>
         <li><a href="../../n.html">N</a></li>
         <li><a href="../../various.html">Různé</a></li>
@@ -192,52 +27,77 @@
   <main>
     <div class="product-detail">
 
-      <!-- Tlačítko zpět — změnit href na správnou kategorii (../../h0.html apod.) -->
+      <!-- Změnit href a text na správnou kategorii -->
       <a href="../../h0.html" class="back-btn">← Zpět na H0</a>
 
-      <!-- Hlavička -->
       <div class="product-header">
+        <!-- Změnit měřítko: H0 · 1:87 | TT · 1:120 | N · 1:160 -->
         <span class="product-scale">H0 · 1:87</span>
         <h1 class="product-title">NÁZEV PRODUKTU</h1>
       </div>
 
-      <!-- Tagy -->
+      <!-- Tagy: buildings | lighting | track | vegetation | vehicles -->
       <div class="product-tags">
-        <span class="tag">🏠 Buildings</span>
-        <!-- Přidat/odebrat tagy dle potřeby -->
+        <span class="tag">🏠 Budovy</span>
       </div>
 
-      <!-- Hlavní fotka — src nahradit cestou k fotce, např. foto1.jpg -->
-      <div class="product-main-img placeholder">Hlavní fotka bude doplněna</div>
-      <!--
-        Až bude fotka:
-        <img src="foto1.jpg" alt="NÁZEV PRODUKTU" class="product-main-img">
-      -->
+      <!-- Hlavní fotka: <div> nahradit za <img src="foto1.jpg" ...> až bude fotka -->
+      <div class="product-main-placeholder">Fotka bude doplněna</div>
 
-      <!-- Galerie — přidat <img src="fotoX.jpg"> pro každou fotku -->
+      <!-- Galerie: <div class="gallery-placeholder"> nahradit za <img src="fotoX.jpg" ...> -->
       <div class="product-gallery">
         <div class="gallery-placeholder">foto 1</div>
         <div class="gallery-placeholder">foto 2</div>
         <div class="gallery-placeholder">foto 3</div>
-        <!--
-          Až budou fotky:
-          <img src="foto1.jpg" alt="NÁZEV PRODUKTU – pohled 1">
-          <img src="foto2.jpg" alt="NÁZEV PRODUKTU – pohled 2">
-        -->
+        <div class="gallery-placeholder">foto 4</div>
       </div>
 
-      <!-- Popis + cena -->
-      <div class="product-body">
-        <div class="product-desc">
-          <p>POPIS PRODUKTU. Sem napište detailní popis co produkt je, z čeho je vytisknutý, k čemu se hodí.</p>
-          <p>Případně druhý odstavec s dalšími informacemi — rozměry, materiál, doporučené použití.</p>
+      <!-- Popis produktu -->
+      <div class="product-desc">
+        <p>POPIS PRODUKTU. Detailní popis co produkt je, z čeho je vytisknutý, k čemu se hodí.</p>
+        <p>Případně druhý odstavec — rozměry, materiál, doporučené použití.</p>
+      </div>
+
+      <!-- Varianty — upravit skupiny a ceny dle potřeby -->
+      <div>
+        <h2 class="variants-title">Varianty</h2>
+
+        <!-- Skupina 1 — upravit popis skupiny -->
+        <div class="variants-group">
+          <div class="variants-group__label">NÁZEV SKUPINY VARIANT — počet ks</div>
+
+          <div class="variant-row">
+            <div class="variant-name">Název varianty 1</div>
+            <div class="variant-price">XXX Kč <span>/ ks</span></div>
+          </div>
+
+          <div class="variant-row">
+            <div class="variant-name">Název varianty 2</div>
+            <div class="variant-price">XXX Kč <span>/ ks</span></div>
+          </div>
+
+          <!-- Přidat další variant-row dle potřeby -->
         </div>
 
-        <div class="product-sidebar">
-          <div class="product-price">000 Kč</div>
-          <div class="product-price-note">orientační cena</div>
-          <a href="mailto:namasinky.tech@gmail.com?subject=Poptávka%3A%20NÁZEV%20PRODUKTU" class="btn-inquire">Poptejte</a>
+        <!-- Skupina 2 — smazat pokud není potřeba -->
+        <div class="variants-group">
+          <div class="variants-group__label">NÁZEV SKUPINY VARIANT 2 — počet ks</div>
+
+          <div class="variant-row">
+            <div class="variant-name">Název varianty 1</div>
+            <div class="variant-price">XXX Kč <span>/ ks</span></div>
+          </div>
+
+          <div class="variant-row">
+            <div class="variant-name">Název varianty 2</div>
+            <div class="variant-price">XXX Kč <span>/ ks</span></div>
+          </div>
         </div>
+      </div>
+
+      <!-- Změnit NÁZEV%20PRODUKTU v subject na skutečný název (URL encoded) -->
+      <div class="product-cta">
+        <a href="mailto:namasinky.tech@gmail.com?subject=Poptávka%3A%20NÁZEV%20PRODUKTU" class="btn-inquire">Poptejte →</a>
       </div>
 
     </div>
