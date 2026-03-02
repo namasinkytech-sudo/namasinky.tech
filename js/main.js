@@ -4,11 +4,13 @@
    ================================================ */
 
 const TAG_LABELS = {
-  buildings:  { label: 'Budovy',        emoji: '🏠' },
-  lighting:   { label: 'Osvětlení',     emoji: '💡' },
-  track:      { label: 'Trať a okolí',  emoji: '🛤️' },
-  vegetation: { label: 'Vegetace',      emoji: '🌳' },
-  vehicles:   { label: 'Vozidla',       emoji: '🚗' }
+  buildings:      { label: 'Budovy',                  emoji: '🏠' },
+  lighting:       { label: 'Osvětlení',               emoji: '💡' },
+  track:          { label: 'Trať a okolí',            emoji: '🛤️' },
+  vegetation:     { label: 'Vegetace',                emoji: '🌳' },
+  vehicles:       { label: 'Vozidla',                 emoji: '🚗' },
+  props:          { label: 'Doplňky a rekvizity',     emoji: '📦' },
+  infrastructure: { label: 'Kolejová infrastruktura', emoji: '🏗️' }
 };
 
 /**

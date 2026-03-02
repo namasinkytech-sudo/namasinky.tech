@@ -472,9 +472,9 @@ img { display: block; max-width: 100%; }
 .back-btn:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
 .product-header {
   display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
   margin-bottom: 0.4rem;
 }
 .product-scale {
