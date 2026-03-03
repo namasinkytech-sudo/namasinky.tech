@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Hlavní stránky -->
+  <url>
+    <loc>https://namasinky.tech/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/h0.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/tt.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/n.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/o-nas.html</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- H0 produkty -->
+  <url>
+    <loc>https://namasinky.tech/products/h0-001/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/h0-002/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/h0-003/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/h0-004/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/h0-005/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- TT produkty -->
+  <url>
+    <loc>https://namasinky.tech/products/tt-001/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/tt-002/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/tt-003/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/tt-004/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/tt-005/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- N produkty -->
+  <url>
+    <loc>https://namasinky.tech/products/n-001/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/n-002/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/n-003/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/n-004/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/n-005/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/n-006/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
