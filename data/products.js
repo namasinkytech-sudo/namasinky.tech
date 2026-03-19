@@ -21,6 +21,7 @@ var products = [
     priceNote:   "dle varianty",
     tags:        ["buildings", "lighting"],
     image:       "images/products/h0-001.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-001/"
   },
@@ -33,6 +34,7 @@ var products = [
     priceNote:   "za 10 ks",
     tags:        ["props"],
     image:       "images/products/h0-002.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-002/"
   },
@@ -45,6 +47,7 @@ var products = [
     priceNote:   "za 10 ks",
     tags:        ["props"],
     image:       "images/products/h0-003.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-003/"
   },
@@ -57,6 +60,7 @@ var products = [
     priceNote:   "za 10 ks",
     tags:        ["props"],
     image:       "images/products/h0-004.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-004/"
   },
@@ -69,6 +73,7 @@ var products = [
     priceNote:   "za kus",
     tags:        ["lighting"],
     image:       "images/products/h0-005.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-005/"
   },
@@ -83,6 +88,7 @@ var products = [
     priceNote:   "dle varianty",
     tags:        ["buildings", "lighting"],
     image:       "images/products/tt-001.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-001/"
   },
@@ -95,6 +101,7 @@ var products = [
     priceNote:   "za kus",
     tags:        ["props"],
     image:       "images/products/tt-002.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-002/"
   },
@@ -107,6 +114,7 @@ var products = [
     priceNote:   "za 10 ks",
     tags:        ["props"],
     image:       "images/products/tt-003.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-003/"
   },
@@ -119,6 +127,7 @@ var products = [
     priceNote:   "za 10 ks",
     tags:        ["props"],
     image:       "images/products/tt-004.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-004/"
   },
@@ -131,6 +140,7 @@ var products = [
     priceNote:   "za 10 ks",
     tags:        ["props"],
     image:       "images/products/tt-005.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-005/"
   },
@@ -145,6 +155,7 @@ var products = [
     priceNote:   "dle varianty",
     tags:        ["buildings", "lighting"],
     image:       "images/products/n-001.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-001/"
   },
@@ -157,6 +168,7 @@ var products = [
     priceNote:   "za 10 ks",
     tags:        ["props"],
     image:       "images/products/n-002.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-002/"
   },
@@ -169,6 +181,7 @@ var products = [
     priceNote:   "za kus",
     tags:        ["infrastructure"],
     image:       "images/products/n-003.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-003/"
   },
@@ -181,6 +194,7 @@ var products = [
     priceNote:   "za kus",
     tags:        ["props"],
     image:       "images/products/n-004.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-004/"
   },
@@ -193,6 +207,7 @@ var products = [
     priceNote:   "za 10 ks",
     tags:        ["props"],
     image:       "images/products/n-005.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-005/"
   },
@@ -205,6 +220,7 @@ var products = [
     priceNote:   "za 10 ks",
     tags:        ["props"],
     image:       "images/products/n-006.jpg",
+    gallery:     [],
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-006/"
   }

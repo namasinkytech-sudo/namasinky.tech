@@ -42,16 +42,9 @@
         <span class="tag">🏠 Budovy</span>
       </div>
 
-      <!-- Hlavní fotka: <div> nahradit za <img src="foto1.jpg" ...> až bude fotka -->
+      <!-- Hlavní fotka + galerie se načítají automaticky z products.js (pole image + gallery) -->
       <div class="product-main-placeholder">Fotka bude doplněna</div>
-
-      <!-- Galerie: <div class="gallery-placeholder"> nahradit za <img src="fotoX.jpg" ...> -->
-      <div class="product-gallery">
-        <div class="gallery-placeholder">foto 1</div>
-        <div class="gallery-placeholder">foto 2</div>
-        <div class="gallery-placeholder">foto 3</div>
-        <div class="gallery-placeholder">foto 4</div>
-      </div>
+      <div class="product-gallery"></div>
 
       <!-- Popis produktu -->
       <div class="product-desc">
@@ -116,5 +109,7 @@
     </p>
   </footer>
 
+  <script src="../../data/products.js"></script>
+  <script src="../../js/detail.js"></script>
 </body>
 </html>
