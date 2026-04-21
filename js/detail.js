@@ -13,26 +13,32 @@
   function src(path) { return '../../' + path; }
 
   /*
-   * Galerie je pole objektů { thumb, full }
-   *   thumb  — zobrazí se v galerii (střední velikost, bez ořezu)
-   *   full   — zobrazí se v lightboxu (plné rozlišení)
+   * Fotky se odvozují automaticky z product.id (převedeno na UPPERCASE):
+   *   Karta:    images/products/H0-002.jpg
+   *   Galerie:  images/products/H0-002-g1.jpg, -g2.jpg, ...
+   *   Fullscr:  images/products/H0-002-f1.jpg, -f2.jpg, ...
    *
-   * Lightbox pole = všechny full verze galerie.
-   * Hlavní foto nahoře na stránce = gallery[0].full (nebo product.image jako fallback).
+   * product.gallery = počet galerie fotek (číslo)
    */
+  var uid   = product.id.toUpperCase();
+  var count = typeof product.gallery === 'number' ? product.gallery : 0;
+  var base  = 'images/products/' + uid;
 
-  var galleryItems = (product.gallery && product.gallery.length)
-    ? product.gallery
-    : [];
+  var galleryItems = [];
+  for (var i = 1; i <= count; i++) {
+    galleryItems.push({
+      thumb: base + '-g' + i + '.jpg',
+      full:  base + '-f' + i + '.jpg'
+    });
+  }
 
-  /* ── Sestavení pole pro lightbox (full verze) ── */
-  var lbImages = galleryItems.map(function (g) { return g.full; });
+  var lbImages  = galleryItems.map(function (g) { return g.full; });
 
   /* ── Lightbox ── */
-  var lb = null;
-  var lbImg = null;
-  var lbPrev = null;
-  var lbNext = null;
+  var lb        = null;
+  var lbImg     = null;
+  var lbPrev    = null;
+  var lbNext    = null;
   var lbCounter = null;
   var lbCurrent = 0;
 
@@ -114,22 +120,22 @@
   /* ── Hlavní obrázek (nahoře na stránce) ── */
   var mainPlaceholder = document.querySelector('.product-main-placeholder');
   if (mainPlaceholder) {
-    var mainSrc = galleryItems.length
-      ? galleryItems[0].full   /* první galerie foto v plném rozlišení */
-      : product.image || null; /* fallback na kartu, pokud galerie chybí */
+    /* Hlavní foto = první galerie fullscreen; pokud není galerie, zkusí kartu */
+    var mainSrc = galleryItems.length ? galleryItems[0].full : base + '.jpg';
 
-    if (mainSrc) {
-      var mainImg = document.createElement('img');
-      mainImg.className = 'product-main-img';
-      mainImg.src = src(mainSrc);
-      mainImg.alt = product.title;
-      if (lbImages.length > 0) {
-        mainImg.style.cursor = 'zoom-in';
-        mainImg.addEventListener('click', function () { openLightbox(0); });
-      }
-      mainPlaceholder.parentNode.replaceChild(mainImg, mainPlaceholder);
+    var mainImg = document.createElement('img');
+    mainImg.className = 'product-main-img';
+    mainImg.src = src(mainSrc);
+    mainImg.alt = product.title;
+    mainImg.onerror = function () {
+      /* Soubor neexistuje — nechej placeholder */
+      mainPlaceholder.parentNode.replaceChild(mainPlaceholder, mainImg);
+    };
+    if (lbImages.length > 0) {
+      mainImg.style.cursor = 'zoom-in';
+      mainImg.addEventListener('click', function () { openLightbox(0); });
     }
-    /* Pokud fotky ještě nejsou, placeholder zůstane */
+    mainPlaceholder.parentNode.replaceChild(mainImg, mainPlaceholder);
   }
 
   /* ── Galerie ── */

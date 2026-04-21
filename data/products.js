@@ -5,17 +5,15 @@
 
    Kategorie (category):   "h0" | "tt" | "n" | "various"
    Tagy (tags, pole):      "buildings" | "lighting" | "track" | "vegetation" | "vehicles"
+                           "props" | "infrastructure"
 
-   image:   images/products/<id>.jpg  — jen karta produktu, doporučeno 400×300 px (4:3)
+   Fotky (automatické pojmenování dle ID produktu):
+     Karta:    images/products/H0-002.jpg
+     Galerie:  images/products/H0-002-g1.jpg, H0-002-g2.jpg, ...
+     Fullscr:  images/products/H0-002-f1.jpg, H0-002-f2.jpg, ...
 
-   gallery: pole objektů { thumb, full }
-            thumb → galerie grid (střední, bez ořezu)  — doporučeno 800×600 px
-            full  → lightbox + hlavní foto na stránce  — doporučeno 1400×1050 px
-            Příklad:
-            gallery: [
-              { thumb: 'images/products/h0-001-g1.jpg', full: 'images/products/h0-001-f1.jpg' },
-              { thumb: 'images/products/h0-001-g2.jpg', full: 'images/products/h0-001-f2.jpg' }
-            ]
+   gallery:  počet galerie fotek (číslo). 0 = žádná galerie.
+             Soubory musí existovat ve správném pojmenování výše.
 
    ================================================ */
 
@@ -30,8 +28,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "dle varianty",
     tags:        ["buildings", "lighting"],
-    image:       "images/products/h0-001.jpg",
-    gallery:     [],
+    gallery:     0,
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-001/"
   },
@@ -43,11 +40,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/H0-002.jpg",
-    gallery:     [
-      { thumb: 'images/products/H0-002-g1.jpg', full: 'images/products/H0-002-f1.jpg' },
-      { thumb: 'images/products/H0-002-g2.jpg', full: 'images/products/H0-002-f2.jpg' }
-    ],
+    gallery:     2,
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-002/"
   },
@@ -59,8 +52,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/h0-003.jpg",
-    gallery:     [],
+    gallery:     0,
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-003/"
   },
@@ -72,12 +64,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/H0-004.jpg",
-    gallery:     [
-      { thumb: 'images/products/H0-004-g1.jpg', full: 'images/products/H0-004-f1.jpg' },
-      { thumb: 'images/products/H0-004-g2.jpg', full: 'images/products/H0-004-f2.jpg' },
-      { thumb: 'images/products/H0-004-g3.jpg', full: 'images/products/H0-004-f3.jpg' }
-    ],
+    gallery:     3,
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-004/"
   },
@@ -89,10 +76,21 @@ var products = [
     price:       "od XXX",
     priceNote:   "za kus",
     tags:        ["lighting"],
-    image:       "images/products/h0-005.jpg",
-    gallery:     [],
+    gallery:     0,
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-005/"
+  },
+  {
+    id:          "h0-006",
+    category:    "h0",
+    title:       "Lodní kontejner",
+    description: "Klasický lodní kontejner pro přístaviště, nákladiště nebo průmyslové areály. Různě poskládané a natočené oživí každé kolejiště.",
+    price:       "od XXX",
+    priceNote:   "za kus",
+    tags:        ["props"],
+    gallery:     3,
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/h0-006/"
   },
 
   /* ────────── TT – Měřítko 1:120 ────────── */
@@ -104,8 +102,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "dle varianty",
     tags:        ["buildings", "lighting"],
-    image:       "images/products/tt-001.jpg",
-    gallery:     [],
+    gallery:     0,
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-001/"
   },
@@ -117,8 +114,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za kus",
     tags:        ["props"],
-    image:       "images/products/tt-002.jpg",
-    gallery:     [],
+    gallery:     0,
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-002/"
   },
@@ -130,11 +126,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/TT-003.jpg",
-    gallery:     [
-      { thumb: 'images/products/TT-003-g1.jpg', full: 'images/products/TT-003-f1.jpg' },
-      { thumb: 'images/products/TT-003-g2.jpg', full: 'images/products/TT-003-f2.jpg' }
-    ],
+    gallery:     2,
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-003/"
   },
@@ -146,8 +138,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/tt-004.jpg",
-    gallery:     [],
+    gallery:     0,
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-004/"
   },
@@ -159,10 +150,21 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/tt-005.jpg",
-    gallery:     [],
+    gallery:     0,
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-005/"
+  },
+  {
+    id:          "tt-006",
+    category:    "tt",
+    title:       "Lodní kontejner",
+    description: "Klasický lodní kontejner pro přístaviště, nákladiště nebo průmyslové areály. Různě poskládané a natočené oživí každé kolejiště.",
+    price:       "od XXX",
+    priceNote:   "za kus",
+    tags:        ["props"],
+    gallery:     8,
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/tt-006/"
   },
 
   /* ────────── N – Měřítko 1:160 ────────── */
@@ -174,8 +176,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "dle varianty",
     tags:        ["buildings", "lighting"],
-    image:       "images/products/n-001.jpg",
-    gallery:     [],
+    gallery:     0,
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-001/"
   },
@@ -187,11 +188,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/N-002.jpg",
-    gallery:     [
-      { thumb: 'images/products/N-002-g1.jpg', full: 'images/products/N-002-f1.jpg' },
-      { thumb: 'images/products/N-002-g2.jpg', full: 'images/products/N-002-f2.jpg' }
-    ],
+    gallery:     2,
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-002/"
   },
@@ -203,8 +200,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za kus",
     tags:        ["infrastructure"],
-    image:       "images/products/n-003.jpg",
-    gallery:     [],
+    gallery:     0,
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-003/"
   },
@@ -216,8 +212,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za kus",
     tags:        ["props"],
-    image:       "images/products/n-004.jpg",
-    gallery:     [],
+    gallery:     0,
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-004/"
   },
@@ -229,8 +224,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/n-005.jpg",
-    gallery:     [],
+    gallery:     0,
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-005/"
   },
@@ -242,10 +236,21 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/n-006.jpg",
-    gallery:     [],
+    gallery:     0,
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-006/"
+  },
+  {
+    id:          "n-007",
+    category:    "n",
+    title:       "Lodní kontejner",
+    description: "Klasický lodní kontejner pro přístaviště, nákladiště nebo průmyslové areály. Různě poskládané a natočené oživí každé kolejiště.",
+    price:       "od XXX",
+    priceNote:   "za kus",
+    tags:        ["props"],
+    gallery:     9,
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/n-007/"
   }
 
 ];

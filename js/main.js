@@ -32,7 +32,7 @@ function createCard(product) {
   return (
     '<' + cardTag + ' class="product-card">' +
       '<div class="product-card__image">' +
-        '<img src="' + product.image + '" alt="' + product.title + '" loading="lazy"' +
+        '<img src="images/products/' + product.id.toUpperCase() + '.jpg" alt="' + product.title + '" loading="lazy"' +
              ' onerror="this.parentElement.classList.add(\'no-image\')">' +
       '</div>' +
       '<div class="product-card__body">' +

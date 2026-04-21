@@ -81,6 +81,11 @@
     <lastmod>2026-03-03</lastmod>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://namasinky.tech/products/tt-006/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <priority>0.8</priority>
+  </url>
 
   <!-- N produkty -->
   <url>
@@ -111,6 +116,18 @@
   <url>
     <loc>https://namasinky.tech/products/n-006/</loc>
     <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://namasinky.tech/products/n-007/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- H0 produkty (nové) -->
+  <url>
+    <loc>https://namasinky.tech/products/h0-006/</loc>
+    <lastmod>2026-04-21</lastmod>
     <priority>0.8</priority>
   </url>
 
