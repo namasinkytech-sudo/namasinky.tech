@@ -5,7 +5,17 @@
 
    Kategorie (category):   "h0" | "tt" | "n" | "various"
    Tagy (tags, pole):      "buildings" | "lighting" | "track" | "vegetation" | "vehicles"
-   Obrázky:                images/products/<id>.jpg  (doporučeno 800×600 px)
+
+   image:   images/products/<id>.jpg  — jen karta produktu, doporučeno 400×300 px (4:3)
+
+   gallery: pole objektů { thumb, full }
+            thumb → galerie grid (střední, bez ořezu)  — doporučeno 800×600 px
+            full  → lightbox + hlavní foto na stránce  — doporučeno 1400×1050 px
+            Příklad:
+            gallery: [
+              { thumb: 'images/products/h0-001-g1.jpg', full: 'images/products/h0-001-f1.jpg' },
+              { thumb: 'images/products/h0-001-g2.jpg', full: 'images/products/h0-001-f2.jpg' }
+            ]
 
    ================================================ */
 

@@ -12,12 +12,21 @@
   /* ── Pomocná funkce: absolutní src z root-relativní cesty ── */
   function src(path) { return '../../' + path; }
 
-  /* ── Sestavení seznamu všech obrázků pro lightbox ── */
-  var allImages = [];
-  if (product.image) allImages.push(product.image);
-  if (product.gallery && product.gallery.length) {
-    product.gallery.forEach(function (g) { allImages.push(g); });
-  }
+  /*
+   * Galerie je pole objektů { thumb, full }
+   *   thumb  — zobrazí se v galerii (střední velikost, bez ořezu)
+   *   full   — zobrazí se v lightboxu (plné rozlišení)
+   *
+   * Lightbox pole = všechny full verze galerie.
+   * Hlavní foto nahoře na stránce = gallery[0].full (nebo product.image jako fallback).
+   */
+
+  var galleryItems = (product.gallery && product.gallery.length)
+    ? product.gallery
+    : [];
+
+  /* ── Sestavení pole pro lightbox (full verze) ── */
+  var lbImages = galleryItems.map(function (g) { return g.full; });
 
   /* ── Lightbox ── */
   var lb = null;
@@ -85,16 +94,14 @@
   }
 
   function showImage(index) {
-    if (index < 0 || index >= allImages.length) return;
+    if (index < 0 || index >= lbImages.length) return;
     lbCurrent = index;
-    lbImg.src = src(allImages[index]);
+    lbImg.src = src(lbImages[index]);
     lbPrev.classList.toggle('is-hidden', index === 0);
-    lbNext.classList.toggle('is-hidden', index === allImages.length - 1);
-    if (allImages.length > 1) {
-      lbCounter.textContent = (index + 1) + ' / ' + allImages.length;
-    } else {
-      lbCounter.textContent = '';
-    }
+    lbNext.classList.toggle('is-hidden', index === lbImages.length - 1);
+    lbCounter.textContent = lbImages.length > 1
+      ? (index + 1) + ' / ' + lbImages.length
+      : '';
   }
 
   document.addEventListener('keydown', function (e) {
@@ -104,37 +111,38 @@
     if (e.key === 'ArrowRight') showImage(lbCurrent + 1);
   });
 
-  /* ── Hlavní obrázek ── */
+  /* ── Hlavní obrázek (nahoře na stránce) ── */
   var mainPlaceholder = document.querySelector('.product-main-placeholder');
   if (mainPlaceholder) {
-    if (product.image) {
+    var mainSrc = galleryItems.length
+      ? galleryItems[0].full   /* první galerie foto v plném rozlišení */
+      : product.image || null; /* fallback na kartu, pokud galerie chybí */
+
+    if (mainSrc) {
       var mainImg = document.createElement('img');
       mainImg.className = 'product-main-img';
-      mainImg.src = src(product.image);
+      mainImg.src = src(mainSrc);
       mainImg.alt = product.title;
-      mainImg.style.cursor = 'zoom-in';
-      mainImg.addEventListener('click', function () { openLightbox(0); });
+      if (lbImages.length > 0) {
+        mainImg.style.cursor = 'zoom-in';
+        mainImg.addEventListener('click', function () { openLightbox(0); });
+      }
       mainPlaceholder.parentNode.replaceChild(mainImg, mainPlaceholder);
     }
-    /* Pokud fotka ještě není, placeholder zůstane */
+    /* Pokud fotky ještě nejsou, placeholder zůstane */
   }
 
   /* ── Galerie ── */
   var gallery = document.querySelector('.product-gallery');
   if (gallery) {
     gallery.innerHTML = '';
-    if (product.gallery && product.gallery.length > 0) {
-      product.gallery.forEach(function (imgPath, i) {
-        var img = document.createElement('img');
-        img.src = src(imgPath);
-        img.alt = product.title + ' – foto ' + (i + 2);
-        /* Index v lightboxu: 0 = hlavní, galerie začíná od 1 */
-        var lbIndex = product.image ? i + 1 : i;
-        img.addEventListener('click', function () { openLightbox(lbIndex); });
-        gallery.appendChild(img);
-      });
-    }
-    /* Prázdná galerie = skrytý grid (bez placeholderů) */
+    galleryItems.forEach(function (item, i) {
+      var img = document.createElement('img');
+      img.src = src(item.thumb);
+      img.alt = product.title + ' – foto ' + (i + 1);
+      img.addEventListener('click', function () { openLightbox(i); });
+      gallery.appendChild(img);
+    });
   }
 
 })();
