@@ -43,8 +43,11 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/h0-002.jpg",
-    gallery:     [],
+    image:       "images/products/H0-002.jpg",
+    gallery:     [
+      { thumb: 'images/products/H0-002-g1.jpg', full: 'images/products/H0-002-f1.jpg' },
+      { thumb: 'images/products/H0-002-g2.jpg', full: 'images/products/H0-002-f2.jpg' }
+    ],
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-002/"
   },
@@ -69,8 +72,12 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/h0-004.jpg",
-    gallery:     [],
+    image:       "images/products/H0-004.jpg",
+    gallery:     [
+      { thumb: 'images/products/H0-004-g1.jpg', full: 'images/products/H0-004-f1.jpg' },
+      { thumb: 'images/products/H0-004-g2.jpg', full: 'images/products/H0-004-f2.jpg' },
+      { thumb: 'images/products/H0-004-g3.jpg', full: 'images/products/H0-004-f3.jpg' }
+    ],
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-004/"
   },
@@ -123,8 +130,11 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/tt-003.jpg",
-    gallery:     [],
+    image:       "images/products/TT-003.jpg",
+    gallery:     [
+      { thumb: 'images/products/TT-003-g1.jpg', full: 'images/products/TT-003-f1.jpg' },
+      { thumb: 'images/products/TT-003-g2.jpg', full: 'images/products/TT-003-f2.jpg' }
+    ],
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-003/"
   },
@@ -177,8 +187,11 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    image:       "images/products/n-002.jpg",
-    gallery:     [],
+    image:       "images/products/N-002.jpg",
+    gallery:     [
+      { thumb: 'images/products/N-002-g1.jpg', full: 'images/products/N-002-f1.jpg' },
+      { thumb: 'images/products/N-002-g2.jpg', full: 'images/products/N-002-f2.jpg' }
+    ],
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-002/"
   },
