@@ -52,7 +52,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    gallery:     0,
+    gallery:     3,
     email:       "namasinky.tech@gmail.com",
     url:         "products/h0-003/"
   },
@@ -138,7 +138,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za 10 ks",
     tags:        ["props"],
-    gallery:     0,
+    gallery:     2,
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-004/"
   },
@@ -150,9 +150,33 @@ var products = [
     price:       "100",
     priceNote:   "za 20 ks",
     tags:        ["props"],
-    gallery:     0,
+    gallery:     3,
     email:       "namasinky.tech@gmail.com",
     url:         "products/tt-005/"
+  },
+  {
+    id:          "tt-007",
+    category:    "tt",
+    title:       "Kontejner na tříděný odpad",
+    description: "Kontejner na tříděný odpad — barva na přání pro libovolný typ odpadu. Skvělý detail obytných čtvrtí, nádražních prostranství nebo parkovišť.",
+    price:       "od XXX",
+    priceNote:   "za kus",
+    tags:        ["props"],
+    gallery:     3,
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/tt-007/"
+  },
+  {
+    id:          "tt-008",
+    category:    "tt",
+    title:       "Svodidla",
+    description: "Ocelová svodidla pro silnice, dálnice nebo průmyslové areály. Vhodná pro dělení jízdních pruhů, okraje vozovky nebo přejezdy. Tisknuté z PLA, vhodné pro přebarvení.",
+    price:       "od XXX",
+    priceNote:   "za kus",
+    tags:        ["infrastructure"],
+    gallery:     7,
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/tt-008/"
   },
   {
     id:          "tt-006",
@@ -200,7 +224,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za kus",
     tags:        ["infrastructure"],
-    gallery:     0,
+    gallery:     4,
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-003/"
   },
@@ -212,7 +236,7 @@ var products = [
     price:       "od XXX",
     priceNote:   "za kus",
     tags:        ["props"],
-    gallery:     0,
+    gallery:     3,
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-004/"
   },
@@ -236,7 +260,7 @@ var products = [
     price:       "100",
     priceNote:   "za 25 ks",
     tags:        ["props"],
-    gallery:     0,
+    gallery:     3,
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-006/"
   },
@@ -251,6 +275,18 @@ var products = [
     gallery:     9,
     email:       "namasinky.tech@gmail.com",
     url:         "products/n-007/"
+  },
+  {
+    id:          "n-008",
+    category:    "n",
+    title:       "Svodidla",
+    description: "Ocelová svodidla pro silnice, dálnice nebo průmyslové areály. Vhodná pro dělení jízdních pruhů, okraje vozovky nebo přejezdy. Tisknuté z PLA, vhodné pro přebarvení.",
+    price:       "od XXX",
+    priceNote:   "za kus",
+    tags:        ["infrastructure"],
+    gallery:     9,
+    email:       "namasinky.tech@gmail.com",
+    url:         "products/n-008/"
   }
 
 ];
