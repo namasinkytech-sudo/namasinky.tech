@@ -128,8 +128,7 @@
     mainImg.src = src(mainSrc);
     mainImg.alt = product.title;
     mainImg.onerror = function () {
-      /* Soubor neexistuje — nechej placeholder */
-      mainPlaceholder.parentNode.replaceChild(mainPlaceholder, mainImg);
+      mainImg.parentNode.replaceChild(mainPlaceholder, mainImg);
     };
     if (lbImages.length > 0) {
       mainImg.style.cursor = 'zoom-in';
